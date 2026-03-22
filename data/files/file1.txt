@@ -1,0 +1,2 @@
+java is powerful
+java is fast
