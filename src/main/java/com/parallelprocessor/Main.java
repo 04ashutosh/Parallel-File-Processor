@@ -3,6 +3,7 @@ package com.parallelprocessor;
 import com.parallelprocessor.aggregator.ResultAggregator;
 import com.parallelprocessor.async.AsyncOrchestrator;
 import com.parallelprocessor.counter.WordCounter;
+import com.parallelprocessor.loom.LoomOrchestrator;
 import com.parallelprocessor.queue.QueueOrchestrator;
 
 public class Main {
@@ -12,9 +13,9 @@ public class Main {
 
         long startTime = System.currentTimeMillis();
 
-        System.out.println("Main thread is kicking off the Queue Pipeline...");
+        System.out.println("Main thread is kicking off the Loom Pipeline...");
 
-        QueueOrchestrator.runQueuePipeline(folder, wordCounter);
+        LoomOrchestrator.runLoomPipeline(folder, wordCounter);
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n---FINAL SUMMARY---");
